@@ -1,0 +1,79 @@
+// Prisma schema for Ajaia Docs - Collaborative Document Editor
+// Documentation: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ==============================================================================
+// DATABASE CONFIGURATION:
+// Default: SQLite for seamless local development with zero external setup.
+//
+// NOTE FOR VERCEL / NEON / SUPABASE DEPLOYMENT:
+// Switch the provider below from "sqlite" to "postgresql":
+//
+//   provider = "postgresql"
+//
+// And set your DATABASE_URL environment variable in Vercel to your Postgres URI:
+// e.g. postgresql://user:password@ep-host.aws.neon.tech/neondb?sslmode=require
+// ==============================================================================
+datasource db {
+  provider = "postgresql"
+  url      = env("postgresql://neondb_owner:npg_Uk94aslGLDZP@ep-plain-glitter-az6sj4j1-pooler.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require")
+}
+
+model User {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String
+  avatarColor String   @default("#2563EB")
+  createdAt   DateTime @default(now())
+
+  // Relations
+  ownedDocuments Document[]        @relation("DocumentOwner")
+  shares         DocumentShare[]
+  savedVersions  DocumentVersion[] @relation("VersionSaver")
+}
+
+model Document {
+  id             String   @id @default(cuid())
+  title          String
+  content        String   // Rich text stored as sanitized HTML string
+  sourceFileName String?  // Optional tracking for imported files (.docx, .md, .txt)
+  ownerId        String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  // Relations
+  owner    User              @relation("DocumentOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  shares   DocumentShare[]
+  versions DocumentVersion[]
+}
+
+model DocumentShare {
+  id         String   @id @default(cuid())
+  documentId String
+  userId     String
+  permission String   // "VIEW" | "EDIT"
+  createdAt  DateTime @default(now())
+
+  // Relations with Cascade Delete
+  document Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([documentId, userId])
+}
+
+model DocumentVersion {
+  id         String   @id @default(cuid())
+  documentId String
+  title      String
+  content    String   // Snapshot of HTML content at this version
+  savedById  String
+  createdAt  DateTime @default(now())
+
+  // Relations with Cascade Delete
+  document Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  savedBy  User     @relation("VersionSaver", fields: [savedById], references: [id], onDelete: Cascade)
+}
+
