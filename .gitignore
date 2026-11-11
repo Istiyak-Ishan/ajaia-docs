@@ -40,3 +40,8 @@ dev.db
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# walkthrough & submission binaries
+temp-walkthrough/
+submission-drive-folder/
+video-temp/

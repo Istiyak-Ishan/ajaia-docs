@@ -119,3 +119,4 @@ Open [http://localhost:3000](http://localhost:3000). Run the test suite anytime 
   2. *Rejected Ephemeral File-Based SQLite on Vercel:* Re-architected persistence to Neon Serverless PostgreSQL with an automatic first-load cloud initializer (`ensureSeeded()`) to prevent production data loss.
   3. *Hardened Server-Side RBAC & XSS Sanitization:* Transformed frontend-only disabled states into strict server-side guards returning HTTP 403 on unauthorized mutations, and added HTML entity escaping on `.txt` file uploads.
 - **Automated Verification:** 32 automated Vitest tests (`npm test`) verify all access control rules, schema constraints, and file parsing pipelines in under 1 second.
+

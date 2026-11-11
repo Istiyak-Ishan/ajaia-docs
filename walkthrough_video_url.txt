@@ -11,3 +11,4 @@ Topics Covered:
 3. Multi-user sharing, role boundaries (Owner vs Editor vs Viewer), and the 1-Click Reviewer Switcher.
 4. Architectural tradeoffs (TipTap/ProseMirror, Neon PostgreSQL, version snapshots vs CRDTs).
 5. AI-native engineering workflow (Gemini Flash 3.8, rejected AI suggestions, automated Vitest verification).
+

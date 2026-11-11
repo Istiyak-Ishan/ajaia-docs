@@ -586,6 +586,7 @@ export default function DocumentEditorPage() {
               <button
                 type="button"
                 onClick={() => setIsHistoryDrawerOpen(false)}
+                aria-label="Close Version History"
                 className="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
               >
                 <X className="w-5 h-5" />

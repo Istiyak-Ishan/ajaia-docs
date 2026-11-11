@@ -91,7 +91,14 @@ export function ShareModal({
     if (isOpen) {
       loadDocumentDetails();
     }
-  }, [isOpen, loadDocumentDetails]);
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+    }
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }
+  }, [isOpen, loadDocumentDetails, onClose]);
 
   if (!isOpen) return null;
 
@@ -268,6 +275,7 @@ export function ShareModal({
           <button
             type="button"
             onClick={onClose}
+            aria-label="Close Share Modal"
             className="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
           >
             <X className="w-5 h-5" />

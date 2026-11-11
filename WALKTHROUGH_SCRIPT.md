@@ -108,3 +108,4 @@
 > *Here in the terminal, our 32 automated Vitest tests verify every file parser rule, schema boundary, and RBAC permission in under a second.*  
 >  
 > *Thank you for your time, and I look forward to discussing the architecture with the Ajaia team!"*
+

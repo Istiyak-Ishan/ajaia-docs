@@ -542,8 +542,12 @@ export default function DashboardPage() {
       <UploadModal
         isOpen={isUploadModalOpen}
         onClose={() => setIsUploadModalOpen(false)}
-        onSuccess={() => {
+        onSuccess={(docData) => {
           fetchDocuments();
+          const docId = (docData as Record<string, unknown>)?.id as string | undefined;
+          if (docId) {
+            router.push(`/documents/${docId}`);
+          }
         }}
       />
 

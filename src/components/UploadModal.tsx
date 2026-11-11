@@ -116,14 +116,16 @@ export function UploadModal({
         throw new Error(data.error || "Failed to process document upload.");
       }
 
-      // Close modal and execute callback
+      // Close modal and navigate/execute callback
       onClose();
+      if (mode === "new") {
+        const docId = data.id || data.document?.id;
+        if (docId) {
+          router.push(`/documents/${docId}`);
+        }
+      }
       if (onSuccess) {
         onSuccess(data);
-      } else if (data.id) {
-        router.push(`/documents/${data.id}`);
-      } else if (data.document?.id) {
-        router.push(`/documents/${data.document.id}`);
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : SUPPORTED_MESSAGE);
