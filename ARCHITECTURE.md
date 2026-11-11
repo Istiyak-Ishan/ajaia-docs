@@ -127,3 +127,4 @@ If allocated an additional 2–4 hours of development, I would prioritize:
    - Allow users to highlight text, attach a threaded discussion sidebar, and resolve comment threads.
 3. **Cryptographic Public Share Links:**
    - Add a `shareToken` field to `Document` allowing read-only access via secret URLs (`/shared/[token]`) without requiring any authentication.
+
