@@ -2,7 +2,7 @@
 # Candidate: Istiyak Hossain Ishan (istiyakishan7@gmail.com)
 # Role: AI-Native Full Stack Developer Take-Home Assignment
 
-WALKTHROUGH_VIDEO_URL: [PASTE_YOUR_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE]
+WALKTHROUGH_VIDEO_URL: https://www.youtube.com/watch?v=s_PRixgsHTU
 
 Duration: ~4 minutes
 Topics Covered:

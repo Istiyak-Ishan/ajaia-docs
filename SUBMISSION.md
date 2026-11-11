@@ -11,10 +11,10 @@
 
 | Resource | Link |
 | :--- | :--- |
-| **Live Deployed Application** | **[PASTE_LIVE_VERCEL_URL_HERE]** *(e.g. `https://ajaia-docs.vercel.app`)* |
-| **Walkthrough Video (Loom / YouTube)** | **[PASTE_VIDEO_LINK_HERE]** |
+| **Live Deployed Application** | [https://ajaia-docs-874y.vercel.app/](https://ajaia-docs-874y.vercel.app/) |
+| **Walkthrough Video (YouTube)** | [https://www.youtube.com/watch?v=s_PRixgsHTU](https://www.youtube.com/watch?v=s_PRixgsHTU) |
 | **GitHub Repository** | [https://github.com/Istiyak-Ishan/ajaia-docs](https://github.com/Istiyak-Ishan/ajaia-docs) |
-| **Google Drive Submission Folder** | **[PASTE_GOOGLE_DRIVE_FOLDER_LINK_HERE]** |
+| **Google Drive Submission Folder** | [https://drive.google.com/drive/folders/199KfQ95k2p8EQ4kmmARwNhzukFajDq6Q?usp=sharing](https://drive.google.com/drive/folders/199KfQ95k2p8EQ4kmmARwNhzukFajDq6Q?usp=sharing) |
 
 ---
 

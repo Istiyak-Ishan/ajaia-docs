@@ -3,7 +3,9 @@
 > **Ajaia LLC — AI-Native Full Stack Developer Take-Home Assignment**  
 > **Candidate:** Istiyak Hossain Ishan ([istiyakishan7@gmail.com](mailto:istiyakishan7@gmail.com))  
 > **Repository:** [https://github.com/Istiyak-Ishan/ajaia-docs](https://github.com/Istiyak-Ishan/ajaia-docs)  
-> **Live Deployment:** [https://ajaia-docs.vercel.app](https://ajaia-docs.vercel.app) *(or your Vercel deployment URL)*
+> **Live Deployment:** [https://ajaia-docs-874y.vercel.app/](https://ajaia-docs-874y.vercel.app/)  
+> **Walkthrough Video:** [https://www.youtube.com/watch?v=s_PRixgsHTU](https://www.youtube.com/watch?v=s_PRixgsHTU)  
+> **Google Drive Submission:** [https://drive.google.com/drive/folders/199KfQ95k2p8EQ4kmmARwNhzukFajDq6Q?usp=sharing](https://drive.google.com/drive/folders/199KfQ95k2p8EQ4kmmARwNhzukFajDq6Q?usp=sharing)
 
 ---
 
